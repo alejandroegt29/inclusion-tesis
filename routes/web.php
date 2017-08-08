@@ -10,27 +10,72 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(['middleware' => ['web']], function () {
+        Route::get('/', function () {
+            return view('welcome');
+        });
+        /*Redireccion a vistas*/
+        Route::get('/inicio','invitadoController@vista_proyecto');
+        Route::get('/ayuda','invitadoController@vista_ayuda');
+        Route::get('/registros','invitadoController@vista_registros');
+        Route::get('/formUsuario','invitadoController@vista_formUser');
+        Route::get('/formUsuarioInstitucion','invitadoController@vista_formUserInstituto');
+        Route::get('formInstitucion','invitadoController@vista_formInstitucion');
 
-Route::get('/', function () {
-    return view('welcome');
+        Route::post('/guardarInstitucion', 'crud_institucionController@insertar');
+
+        Route::get('/login','autenticarController@vista_login');
+
+        Route::post('/login','autenticarController@login');
 });
-/*Redireccion a vistas*/
-Route::get('/inicio','invitadoController@vista_proyecto');
-Route::get('/ayuda','invitadoController@vista_ayuda');
-Route::get('/registros','invitadoController@vista_registros');
-Route::get('/formUsuario','invitadoController@vista_formUser');
-Route::get('/formUsuarioInstitucion','invitadoController@vista_formUserInstituto');
-Route::get('formInstitucion','invitadoController@vista_formInstitucion');
-Route::get('/login','autenticarController@vista_login');
 
-Route::post('/login','autenticarController@login')->middleware('institucion');
-Route::post('/logout','autenticarController@logout');
+Route::group(['middleware' => 'institucion'], function () {
+     Route::get('/logout','autenticarController@logout');
+    Route::get('/index', 'institucionController@vista_institucion');
+});
 
 
-Route::get('institucion/index', 'autenticarController@vista_institucion')->middleware('institucion');
 
 
-Route::post('/guardarInstitucion', 'crud_institucionController@insertar');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Route::get('activarmicro', function () {
     

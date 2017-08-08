@@ -26,6 +26,10 @@ class CreateInstitucionTable extends Migration
             $table->string('clave');
             $table->timestamps();
         });
+
+        Schema::table('institucion', function($table) {
+            $table->rememberToken();
+        });
     }
 
     /**

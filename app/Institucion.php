@@ -11,9 +11,9 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class Institucion extends Authenticatable
 {
     use Notifiable;
-
+    //public $timestamps = false;
     protected $table="institucion";
-    protected $guard = "institucion";
+    //protected $guard = "institucion";
 
      protected $fillable = [
          'email', 'password',

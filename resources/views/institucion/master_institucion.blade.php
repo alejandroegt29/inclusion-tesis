@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +6,9 @@
 	 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	 <meta id="token" name="token" value="{{csrf_token() }}">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Document</title>
-	<link rel="stylesheet" href="css/css.css">
+	<title>Sesión de  {{ Auth::guard('institucion')->user()->email }}</title>
+	<link rel="stylesheet" href="{{ asset('/css/app.css') }}">
+
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body onMouseMove="stopScroll();">
@@ -92,28 +94,3 @@
 
 
 </html>
-
-
-<!--<nav>
-				<ul>
-				{{--@if (Session::has('activarMicro'))
-					<li><a href="desactivarmicro"><i class="fa fa-microphone fa-3x micro-on" aria-hidden="true"></i></a></li>
-				@endif
-
-				@if (empty(Session::get('activarMicro')))
-				<li><a href="activarmicro">
-					<i class="fa fa-microphone fa-3x micro-off" aria-hidden="true"></i>
-				</a></li>
-				@endif
-				@if (Session::has('activarText'))
-					<li><a href="desactivartext"><i class="fa fa-commenting fa-3x text-on" aria-hidden="true"></i></a></li>
-				@endif
-
-				@if (empty(Session::get('activarText')))
-				<li><a href="activartext">
-					<i class="fa fa-commenting fa-3x text-off" aria-hidden="true"></i></i>
-				</a></li>
-				@endif
-				
-			</ul>
-			</nav>
