@@ -16,7 +16,7 @@
 						<div>
 		<form action="/login" method="post">
 			{{ csrf_field() }}
-			<label for="">Correo</label>
+			<label for="">Correo electronico</label>
 			<input class="control-form input" type="text" name="correo" >
 			<label for="">Clave</label>
 			<input class="control-form input" type="password" name="clave">
