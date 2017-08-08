@@ -54,15 +54,7 @@
         <li><a class="ar" href="#about">Equipo</a></li>
         <li><a class="ar" href="#service">Proyecto</a></li>
         <li><a class="ar" href="#contact">Contactenos</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">¿Te ayudamos? <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a id="activarcomadnovoz" href="#"><i class="fa fa-microphone" aria-hidden="true"></i> Activar Microfono</a></li>
-            <li><a id="activarLector" href="#"><i class="fa fa-headphones" aria-hidden="true"></i> Activar dictador de palabras</a>
-            </li>
-            <li><a href="ayudainfo">porque queremos ayudarte</a></li>
-          </ul>
-        </li>
+        
       </ul>
             </div>
             <!-- /.navbar-collapse -->
