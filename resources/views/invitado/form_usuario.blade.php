@@ -1,11 +1,11 @@
-@extends('invitado.master_invitado')
+﻿@extends('invitado.master_invitado')
 
 @section('content')
 	<div class="padding color-verde">
 		<div class="row">
 			<div class="col-md-12">
 				<h3>Registro de usuario</h3>
-				<h4 class="txt">Registro de usuario individual o no perteneciente a una institución</h4>
+				<h4 class="txt">Registro de usuario individual o no perteneciente a una institución.</h4>
 			</div>
 		</div>
 		<div class="ico-user-form animated bounceIn"></div>
