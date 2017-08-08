@@ -8,15 +8,13 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 class autenticarController extends Controller
 {
 
-	
-
     /**
      * Where to redirect users after login.
      *
      * @var string
      */
     protected $redirectTo = '/home';
-    protected $guard = 'institucion';
+    //protected $guard = 'institucion';
 
     /*protected function guard()
     {
@@ -32,14 +30,14 @@ class autenticarController extends Controller
     {
 
     	if (\Auth::guard('institucion')->attempt(['email' => $data->correo, 'password' => $data->clave])) {
-           return redirect('institucion/index');
+           return redirect('/index');
         }
+        return redirect()->back();
     }
     public function logout(){
-        \Auth::logout();
+        \Auth::guard('institucion')->logout();
+        return redirect('/inicio');
     }
 
-    function vista_institucion(){
-        return "hola";
-    }
+    
 }
