@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>local</title>
+    <title>github</title>
     <link href="css/cssinit.css" rel="stylesheet">
 </head>
 
